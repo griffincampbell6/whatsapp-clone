@@ -14,7 +14,7 @@ import { Fontisto } from "@expo/vector-icons";
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
 import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
+import ChatScreen from '../screens/ChatScreen';
 import { MainTabParamList, TabOneParamList, TabTwoParamList } from '../types';
 import { min } from 'react-native-reanimated';
 
@@ -50,7 +50,7 @@ export default function MainTabNavigator() {
       />
       <MainTab.Screen
         name="Chats"
-        component={TabTwoNavigator}
+        component={ChatScreen}
       />
       <MainTab.Screen
         name="Status"
@@ -93,7 +93,7 @@ function TabTwoNavigator() {
     <TabTwoStack.Navigator>
       <TabTwoStack.Screen
         name="TabTwoScreen"
-        component={TabTwoScreen}
+        component={ChatScreen}
         options={{ headerTitle: 'Tab Two Title' }}
       />
     </TabTwoStack.Navigator>
