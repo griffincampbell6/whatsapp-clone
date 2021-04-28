@@ -12,7 +12,7 @@ import { Octicons, MaterialCommunityIcons } from '@expo/vector-icons';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
-import BottomTabNavigator from './BottomTabNavigator';
+import MainTabNavigator from './MainTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
@@ -34,6 +34,7 @@ function RootNavigator() {
     <Stack.Navigator screenOptions={{ 
       headerStyle: {
         backgroundColor: Colors.light.tint,
+        elevation: 0,
       },
       headerTintColor: Colors.light.background,
       headerTitleStyle: {
@@ -43,7 +44,7 @@ function RootNavigator() {
       }}>
       <Stack.Screen 
         name="Root" 
-        component={BottomTabNavigator}
+        component={MainTabNavigator}
         options={{
           title: "WhatsApp",
           headerRight: () => (
@@ -53,8 +54,8 @@ function RootNavigator() {
               justifyContent: 'space-between',
               marginRight: 10,
               }}>
-              <Octicons name="search" size={24} color={'white'} />
-              <MaterialCommunityIcons name="dots-vertical" size={24} color={'white'} />
+              <Octicons name="search" size={22} color={'white'} />
+              <MaterialCommunityIcons name="dots-vertical" size={22} color={'white'} />
             </View>
           )
         }}  
