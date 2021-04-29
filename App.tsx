@@ -6,6 +6,9 @@ import useCachedResources from './hooks/useCachedResources';
 import useColorScheme from './hooks/useColorScheme';
 import Navigation from './navigation';
 
+// import { API, graphqlOperation } from 'aws-amplify';
+// import { getUser } from './src/graphql/queries';
+
 import Amplify from 'aws-amplify';
 import config from './src/aws-exports';
 Amplify.configure(config);
